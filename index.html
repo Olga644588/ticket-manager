@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ticket Manager</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Управление тикетами</h1>
+        <button id="add-ticket-btn" class="btn btn-add">+ Добавить тикет</button>
+      </div>
+      <ul id="tickets-list" class="tickets-list"></ul>
+    </div>
+
+    <div id="ticket-modal" class="modal hidden">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <h2 id="modal-title">Добавить тикет</h2>
+        <form id="ticket-form" class="ticket-form">
+          <div class="form-row">
+            <label for="ticket-name">Краткое описание</label>
+            <input type="text" id="ticket-name" name="name" required />
+          </div>
+          <div class="form-row">
+            <label for="ticket-description">Подробное описание</label>
+            <textarea id="ticket-description" name="description" rows="4"></textarea>
+          </div>
+          <div class="modal-actions">
+            <button type="button" class="btn btn-cancel" id="cancel-ticket-btn">Отмена</button>
+            <button type="submit" class="btn btn-save">ОК</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="delete-modal" class="modal hidden">
+      <div class="modal-overlay"></div>
+      <div class="modal-content modal-small">
+        <h2>Удалить тикет</h2>
+        <p>Вы уверены, что хотите удалить тикет? Это действие необратимо.</p>
+        <div class="modal-actions">
+          <button type="button" class="btn btn-cancel" id="cancel-delete-btn">Отмена</button>
+          <button type="button" class="btn btn-delete" id="confirm-delete-btn">Удалить</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="bundle.js"></script>
+  </body>
+</html>
