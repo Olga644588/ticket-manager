@@ -12,11 +12,7 @@
 
 1. Бэкенд (порт 7070):
 ``bash
-   cd ticket-backend
-   npm install
-   node index.js
+   cd ticket-backend && npm install && node index.js
 2. Фронтенд (порт 8080):
 в другом терминале
-cd ticket-manager
-npm install
-npm run dev
+cd ticket-manager && npm install && npm run dev
